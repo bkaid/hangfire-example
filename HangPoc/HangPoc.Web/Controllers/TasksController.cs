@@ -2,16 +2,12 @@
 using HangPoc.Web.Services;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
-namespace HangPoc.Web.Controllers
-{
+namespace HangPoc.Web.Controllers {
+
     [RoutePrefix("api/tasks")]
-    public class TasksController : ApiController
-    {
+    public class TasksController : ApiController {
 
         [Route("")]
         [HttpGet]
@@ -37,8 +33,9 @@ namespace HangPoc.Web.Controllers
 
                 var rnd = new Random();
 
-                for(int i=0; i < 10; i++) {
+                for (int i = 0; i < 10; i++) {
                     var newTask = svc.Create(new TaskViewModel {
+                        CreatedUtc = DateTime.UtcNow,
                         ExpiresAtUtc = DateTime.UtcNow.AddMinutes(rnd.Next(1, 5)),
                         IsExpired = false
                     });
