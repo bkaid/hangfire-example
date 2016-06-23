@@ -34,6 +34,7 @@ namespace HangPoc.Web.Controllers {
                 var rnd = new Random();
 
                 for (int i = 0; i < 10; i++) {
+
                     var newTask = svc.Create(new TaskViewModel {
                         CreatedUtc = DateTime.UtcNow,
                         ExpiresAtUtc = DateTime.UtcNow.AddMinutes(rnd.Next(1, 5)),

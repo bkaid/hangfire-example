@@ -1,9 +1,8 @@
-﻿using System;
+﻿using HangPoc.Domain.Tasks;
+using HangPoc.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using HangPoc.Web.Models;
-using HangPoc.Domain.Tasks;
 
 namespace HangPoc.Web.Services {
 
@@ -22,6 +21,7 @@ namespace HangPoc.Web.Services {
             var domain = _repo.All().ToList();
 
             foreach(var d in domain) {
+
                 retVal.Add(Map(d));
             }
 
@@ -63,6 +63,7 @@ namespace HangPoc.Web.Services {
                 .ToList();
 
             foreach (var d in domain) {
+
                 retVal.Add(Map(d));
             }
 
