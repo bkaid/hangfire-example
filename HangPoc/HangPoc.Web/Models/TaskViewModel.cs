@@ -14,5 +14,6 @@ namespace HangPoc.Web.Models {
         public DateTime ExpiresAtUtc { get; set; }
 
         public bool IsExpired { get; set; }
+
     }
 }

@@ -11,6 +11,7 @@ namespace HangPoc.Web.Jobs {
                 var expireList = svc.FindTasksThatShouldBeExpired();
 
                 foreach(var t in expireList) {
+
                     svc.Expire(t.Id);
                 }
             }

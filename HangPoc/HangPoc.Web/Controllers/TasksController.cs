@@ -26,6 +26,7 @@ namespace HangPoc.Web.Controllers {
         [Route("randomize")]
         [HttpGet]
         public IHttpActionResult CreateRandomTasks() {
+            // Used to seed some sample records
 
             var retVal = new List<TaskViewModel>();
 

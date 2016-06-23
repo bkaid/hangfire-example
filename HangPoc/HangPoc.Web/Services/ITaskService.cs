@@ -15,5 +15,6 @@ namespace HangPoc.Web.Services {
         TaskViewModel Expire(Guid id);
 
         List<TaskViewModel> FindTasksThatShouldBeExpired();
+
     }
 }

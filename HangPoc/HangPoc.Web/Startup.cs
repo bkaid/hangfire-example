@@ -9,6 +9,7 @@ namespace HangPoc.Web {
     public class Startup {
 
         public void Configuration(IAppBuilder app) {
+
             GlobalConfiguration.Configuration
                 .UseSqlServerStorage("TasksContext");
 
